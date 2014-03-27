@@ -12,49 +12,49 @@
 	<div class="fold">
 		<dl class="fold-food"><a href="javascript:void(0);" class="arrow-close">menu 1</a></dl>
 		<ul>
-			<li class="dotted"><a href="javascript:void(0);" title='1'>file1</a></li>
+			<li class="dotted"><a href="javascript:void(0);" onclick="showContent(1)">file1</a></li>
 		</ul>
 		<ul>
-			<li class="dotted"><a href="javascript:void(0);" title='2'>file2</a></li>
+			<li class="dotted"><a href="javascript:void(0);" onclick="showContent(2)">file2</a></li>
 		</ul>
 		<ul>
-			<li class="solid"><a href="javascript:void(0);" title='3'>file3</a></li>
+			<li class="solid"><a href="javascript:void(0);" onclick="showContent(3)">file3</a></li>
 		</ul>
 	</div>
 	<div class="fold">
 		<dl class="fold-food"><a href="javascript:void(0);" class="arrow-close">menu 2</a></dl>
 		<ul>
-			<li class="dotted"><a href="javascript:void(0);" title='4'>file4</a></li>
+			<li class="dotted"><a href="javascript:void(0);" onclick="showContent(4)">file4</a></li>
 		</ul>
 		<ul>
-			<li class="solid"><a href="javascript:void(0);" title='5'>file5</a></li>
+			<li class="solid"><a href="javascript:void(0);" onclick="showContent(5)">file5</a></li>
 		</ul>
 	</div>
 	<div class="fold">
 		<dl class="fold-food"><a href="javascript:void(0);" class="arrow-close">menu 3</a></dl>
 		<ul>
-			<li class="dotted"><a href="javascript:void(0);" title='6'>file6</a></li>
+			<li class="dotted"><a href="javascript:void(0);" onclick="showContent(6)">file6</a></li>
 		</ul>
 		<ul>
-			<li class="dotted"><a href="javascript:void(0);" title='7'>file7</a></li>
+			<li class="dotted"><a href="javascript:void(0);" onclick="showContent(7)">file7</a></li>
 		</ul>
 		<ul>
-			<li class="solid"><a href="javascript:void(0);" title='8'>file8</a></li>
+			<li class="solid"><a href="javascript:void(0);" onclick="showContent(8)">file8</a></li>
 		</ul>
 	</div>
 	<div class="fold">
 		<dl class="fold-food"><a href="javascript:void(0);" class="arrow-close">menu 4</a></dl>
 		<ul>
-			<li class="solid"><a href="javascript:void(0);" title='9'>file9</a></li>
+			<li class="solid"><a href="javascript:void(0);" onclick="showContent(9)">file9</a></li>
 		</ul>
 	</div>
 	<div class="fold">
 		<dl class="fold-food"><a href="javascript:void(0);" class="arrow-close">menu 5</a></dl>
 		<ul>
-			<li class="dotted"><a href="javascript:void(0);" title='10'>file10</a></li>
+			<li class="dotted"><a href="javascript:void(0);" onclick="showContent(10)">file10</a></li>
 		</ul>
 		<ul>
-			<li class="solid"><a href="javascript:void(0);" title='11'>file11</a></li>
+			<li class="solid"><a href="javascript:void(0);" onclick="showContent(11)">file11</a></li>
 		</ul>
 	</div>
 </div>
@@ -83,9 +83,6 @@ $(document).ready(function(){
 	$('.fold li a').click(function(){
 		$('.fold li a.indexed').removeClass('indexed');
 		$(this).addClass('indexed');
-
-		// 这里做页面切换提交
-		var id = $(this).attr('title');
 	});
 });
 
@@ -95,6 +92,10 @@ $(window).resize(function(){
 
 function initfoodsize(){
 	$("#container_left").height($(window).height());
+}
+
+function showContent(id){
+	// event code...
 }
 
 </script>
